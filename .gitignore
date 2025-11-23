@@ -1,0 +1,18 @@
+# Gradle
+.gradle
+build/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Kotlin
+.kotlin
+
+# OS
+.DS_Store
+
+# Resources folder
+src/main/resources/aoc2025/*
+!src/main/resources/aoc2025/template.txt
