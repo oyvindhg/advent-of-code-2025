@@ -6,17 +6,17 @@ object Template {
     private const val INPUT_FILENAME = "template.txt"
 
     fun solve() {
+        println("===Template===\n")
         val input = INPUT_FILENAME.readPuzzle()
         val data = parse(input)
 
-        val (firstSolution, firstTimeTaken) = measureTimedValue { solveFirst(data) }
-        println("===Template===\n")
         println("---Task 1---")
+        val (firstSolution, firstTimeTaken) = measureTimedValue { solveFirst(data) }
         println("Solution: $firstSolution")
         println("Time: ${firstTimeTaken.inWholeMilliseconds} ms\n")
 
-        val (secondSolution, secondTimeTaken) = measureTimedValue { solveSecond(data) }
         println("---Task 2---")
+        val (secondSolution, secondTimeTaken) = measureTimedValue { solveSecond(data) }
         println("Solution: $secondSolution")
         println("Time: ${secondTimeTaken.inWholeMilliseconds} ms")
     }
