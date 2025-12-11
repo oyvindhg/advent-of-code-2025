@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
         4 -> Day04.solve()
         5 -> Day05.solve()
         6 -> Day06.solve()
+        7 -> Day07.solve()
         else -> throw IllegalArgumentException("No solution for day number $dayNumber")
     }
 }
