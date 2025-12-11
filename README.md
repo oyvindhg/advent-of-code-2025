@@ -1,7 +1,7 @@
-# Advent of Code 2025
+# :snowflake::christmas_tree: Advent of Code 2025 :gift::bell:
 Kotlin solutions to the [2025 Advent of Code](https://adventofcode.com/2025) problems.
 
-## Running
+## Running :star:
 Copy the puzzle input text into a file `src/main/resources/day{DD}.txt` where `{DD}` is the day number.
 
 The solution can be run as follows:
@@ -13,7 +13,7 @@ where `{DD}` is the day number.
 
 For example, `./gradlew run --args=01` runs the solution for the first day.
 
-## Testing
+## Testing :star2:
 Run the solutions on test data:
 
 ```
@@ -23,7 +23,7 @@ where `{DD}` is the day number.
 
 For example, `./gradlew test --tests "*Day01Test"` runs the tests for the first day.
 
-## Previous years
+## Previous years :dizzy:
 
 [Advent of Code 2024 (Go)](https://github.com/oyvindhg/advent-of-code-2024)
 
