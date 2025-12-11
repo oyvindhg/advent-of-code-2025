@@ -1,7 +1,5 @@
 package aoc2025
 
-import java.lang.Math.pow
-import kotlin.math.max
 import kotlin.math.pow
 import kotlin.time.measureTimedValue
 
