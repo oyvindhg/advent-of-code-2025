@@ -38,7 +38,7 @@ object Day08 {
             for (secondBoxNumber in firstBoxNumber + 1 until boxes.size) {
                 val secondBox = boxes[secondBoxNumber]
                 val distance = calculateDistance(firstBox, secondBox)
-                if (boxDistanceMaxHeap.size < connectionCount || distance < boxDistanceMaxHeap.first().distance) {
+                if (boxDistanceMaxHeap.size < connectionCount || distance < boxDistanceMaxHeap.peek().distance) {
                     boxDistanceMaxHeap.add(BoxDistance(distance, firstBoxNumber, secondBoxNumber))
                 }
                 if (boxDistanceMaxHeap.size > connectionCount) {
@@ -85,7 +85,7 @@ object Day08 {
                         }
                     }
                 }
-                if (clusterSizeMinHeap.size < 3 || clusterSize > clusterSizeMinHeap.first()) {
+                if (clusterSizeMinHeap.size < 3 || clusterSize > clusterSizeMinHeap.peek()) {
                     clusterSizeMinHeap.add(clusterSize)
                 }
                 if (clusterSizeMinHeap.size > 3) {
