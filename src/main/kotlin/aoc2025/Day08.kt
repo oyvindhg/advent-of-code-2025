@@ -109,7 +109,7 @@ object Day08 {
         }
         val sortedBoxDistances = boxDistances.sortedBy { it.distance }
 
-        sortedBoxDistances.forEachIndexed { index, (_, firstBoxNumber, secondBoxNumber) ->
+        sortedBoxDistances.forEach { (_, firstBoxNumber, secondBoxNumber) ->
             val firstBoxRoot = findRoot(boxRoots, firstBoxNumber)
             val secondBoxRoot = findRoot(boxRoots, secondBoxNumber)
             val smallestBoxNumber = min(firstBoxRoot, secondBoxRoot)
