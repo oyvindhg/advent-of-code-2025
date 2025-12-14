@@ -50,7 +50,7 @@ object Day09 {
     internal fun solveSecond(tiles: List<Point>): Long {
         var maxArea = 0L
         tiles.forEachIndexed { firstTileNumber, firstTile ->
-            (firstTileNumber + 1 until tiles.size).mapNotNull { secondTileNumber ->
+            (firstTileNumber + 1 until tiles.size).forEach { secondTileNumber ->
                 val secondTile = tiles[secondTileNumber]
 
                 val square = Square(
