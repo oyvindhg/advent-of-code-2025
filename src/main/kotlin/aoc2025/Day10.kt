@@ -45,17 +45,18 @@ object Day10 {
 
     internal fun solveFirst(manuals: List<Manual>): Int {
         return manuals.sumOf { manual ->
-            runBfsLightSearch(manual)
+            runLightBfsSearch(manual)
         }
     }
 
     internal fun solveSecond(manuals: List<Manual>): Int {
+        Loader.loadNativeLibraries()
         return manuals.sumOf { manual ->
-            runJoltageSimplexSolver(manual)
+            runJoltageCpSatSolver(manual)
         }
     }
 
-    private fun runBfsLightSearch(manual: Manual): Int {
+    private fun runLightBfsSearch(manual: Manual): Int {
         val initialLights = ".".repeat(manual.lights.length)
         val seenLights = mutableSetOf(initialLights)
         val toVisitLights = ArrayDeque(listOf(Pair(initialLights, 0)))
@@ -84,8 +85,7 @@ object Day10 {
         throw IllegalStateException("No way to turn on the lights to reach the state in the manual")
     }
 
-    private fun runJoltageSimplexSolver(manual: Manual): Int {
-        Loader.loadNativeLibraries()
+    private fun runJoltageCpSatSolver(manual: Manual): Int {
         val model = CpModel()
 
         val upperLimit = manual.joltages.max().toLong()
