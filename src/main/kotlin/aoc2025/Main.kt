@@ -14,6 +14,7 @@ fun main(args: Array<String>) {
         8 -> Day08.solve()
         9 -> Day09.solve()
         10 -> Day10.solve()
+        11 -> Day11.solve()
         else -> throw IllegalArgumentException("No solution for day number $dayNumber")
     }
 }
